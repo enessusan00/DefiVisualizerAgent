@@ -46,7 +46,10 @@ const defiVisualizer = new Agent({
 
   Users can request specific tokens, time periods, metrics, and visualization types.
   Be informative, accurate, and focused on creating visually impactful representations of DeFi data.`
-});
+,
+  apiKey: process.env.OPENSERV_API_KEY,
+}
+);
 
 // Register all capabilities
 registerDataCapabilities(defiVisualizer);
@@ -59,10 +62,5 @@ defiVisualizer.start();
 
 console.log(`🚀 DeFiVisualizer agent is running on port ${PORT}`);
 
-// Handle graceful shutdown
-process.on('SIGINT', () => {
-  console.log('Shutting down DeFiVisualizer agent...');
-  process.exit(0);
-});
 
 export default defiVisualizer;

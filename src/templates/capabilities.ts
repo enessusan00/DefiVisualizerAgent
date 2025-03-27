@@ -275,7 +275,7 @@ The HTML visualization is saved locally at: ${filePath}
                 await mainAgent.uploadFile({
                   workspaceId: action.workspace.id,
                   path: `${filename}.txt`,  // Use simple text format
-                  file: Buffer.from(`${processedData.token?.name || 'Token'} (${processedData.token?.symbol || 'Unknown'}) Price Chart\n\nPrice: \${processedData.price?.usd.toFixed(2) || 'N/A'} | Change: ${processedData.price?.change24h.toFixed(2) || 'N/A'}%\n\nFull visualization saved locally at: ${filePath}`),
+                  file: Buffer.from(`${processedData.token?.name || 'Token'} (${processedData.token?.symbol || 'Unknown'}) Price Chart\n\nPrice: ${processedData.price?.usd.toFixed(2) || 'N/A'} | Change: ${processedData.price?.change24h.toFixed(2) || 'N/A'}`),
                   skipSummarizer: true,
                 });
                 

@@ -119,7 +119,7 @@ npm start
 
 - **Framework**: OpenServ Labs SDK
 - **Language**: TypeScript
-- **Visualization Libraries**: Chart.js, D3.js
+- **Visualization Libraries**: Chart.js, puppeteer
 - **Data Sources**:
   - DexScreener API
   - DefiLlama API
